@@ -1,0 +1,76 @@
+cpoy 
+.dll, .reg, .h paste in forclient
+
+copy forclient folder and paste in client rename it to From Server
+
+in client
+1. open widows.cpp
+2. open fromserver
+3. window .icon copy file
+above WndProc add  header file
+4.ISum *pIsum = NULL //in global
+  ISubtract *pISubtract = NULL;
+  
+ in WinMain()
+{
+	start and stop COM engine
+    //after code comment
+	HRESULT hr = S_OK;
+	//start com engine /Co- COM
+	hr = CoInitialize(NULL);
+	//FAILED(hr) and SUCCEEDED(hr) 2 macros provided by win32 for HRESUKT
+        if(FAILED(hr)){
+		MB();
+		exit(0); 
+	}	
+	
+	//after message loop
+	//stop com engine
+	CoUnintialize();
+}
+
+inside WndProc{
+	//function declartion
+	void SafeInterfaceRelease(void);
+	//variabel declrtnin
+	HRESULT hr= S_OK;	
+
+	WM_CREATE:
+		hr = CoCreateInstance(CLSID_SUMSUBTRACT, NULL, CLSCTX_INPROC_SERVER, IID_ISum,(void**)&pIsum);
+		if(FAILED(hr)){
+			MB(ISUM interface couldn't obtained, COM_ERROR);
+			DestroyWindow(hwnd);
+		}		
+		MB(ISum Interface obtained, ICON_INFO);
+		break;
+	WM_DESTROY
+		call above functo
+	
+
+}
+void SafeInterfaceRelease(void){
+	//code 
+	if(pISubtract){
+		pISubtract->Release(); //free memory
+		pISubtract = NULL;
+	}
+	if(pISum){
+		pISum->Release(); //free memory
+		pISum = NULL;
+	}
+}
+
+
+in build.bat
+add lib - ole32.lib
+
+copy .dll file and paste in below location
+co to windows/system32/ 
+
+double click on reg file to register file
+
+
+TCHAR str[255]
+pISum->
+
+//we should relese if safeinterface donot called in WM_DESTROY

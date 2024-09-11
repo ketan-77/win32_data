@@ -1,0 +1,18 @@
+Interface by def is set of semantically related function 
+
+Interface is set of pure virtual function pointers packed into an array which is called as
+V table (vtbl) 
+C stands for Co-class also known as implementor class
+
+1: why m_cRef datatype is long
+2: why in release, after m_cRef became 0, still it return 0 not m_cRef
+
+
+IClassfactory GUID 
+- this create co class object
+0000001 0000 0000 
+
+
+create instance - create instance of co class
+
+DllGetClass - create instance of classfactory

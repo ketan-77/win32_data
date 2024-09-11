@@ -1,0 +1,11 @@
+IUnkown GUID : { 00000000-0000-0000-C000-000000000046 }
+guidgen.exe this programmer is used to generate GUID
+
+types/ other names GUID
+CLSID - Implementor class
+IID - Interface ID 
+LIBID - used in automation library id
+CATID - category id
+APPID - Application id
+DISPID - used in automation dispatch id
+
