@@ -130,7 +130,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		pISubtract->Release();
 		pISubtract = NULL;
 
-		DestroyWindow(hwnd);
+		DestroyWindow(hwnd); //send WM_DESTROY
 		break;
 	case WM_DESTROY:
 		SafeInterfaceRelease();

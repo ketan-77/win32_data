@@ -4,6 +4,6 @@
     "\\01-Server",
     "\\02-Client"
   ],
-  "SelectedNode": "\\02-Client\\FromServer",
+  "SelectedNode": "\\01-Server\\ClassFactoryDllServerWithRegFile.def",
   "PreviewInSolutionExplorer": false
 }
