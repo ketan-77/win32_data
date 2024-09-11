@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\CLSID\{23D61BAE-D3AE-47F2-89FB-B1E5E67C1BC1}]
+@="KSM_ClassFactory"
+[HKEY_CLASSES_ROOT\CLSID\{23D61BAE-D3AE-47F2-89FB-B1E5E67C1BC1}\InprocServer32]
+@="C:\\Windows\\System32\\ClassFactoryWithRegFile.dll"
+
+
+
