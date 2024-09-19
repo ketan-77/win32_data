@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\CLSID\{3CE9FF2B-60AD-4C68-B56C-B81C39CDE250}]
+@="KSM_OuterServer"
+[HKEY_CLASSES_ROOT\CLSID\{3CE9FF2B-60AD-4C68-B56C-B81C39CDE250}\InprocServer32]
+@="C:\\Windows\\System32\\ContainmentOuterComponentWithregFile.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{7FE5CED4-5D15-476C-9932-BFDB2DAE6E6B}]
+@="KSM_Containment_Inner_Server"
+[HKEY_CLASSES_ROOT\CLSID\{7FE5CED4-5D15-476C-9932-BFDB2DAE6E6B}\InprocServer32]
+@="C:\\Windows\\System32\\ContainmentInnerComponentWithRegFile.dll"
+
+

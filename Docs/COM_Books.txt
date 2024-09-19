@@ -1,0 +1,9 @@
+Books for COM
+1: Inside COM, Dale rogerson
+2: Inside DCOM(Distributed COM), Eddon & Eddon
+3: Essential COM
+4: Inside OLE2, Kraig brockschmidt 
+
+ATL(Active Template Library)
+5: Inside ATL, gorge shepherd
+6: Begining ATL3 COM Programming, Richard griens

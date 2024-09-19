@@ -1,0 +1,18 @@
+mcref why long type
+: because incre & Decr take long
+
+no of active comp tells - co class is active or not
+interlock increment are like mutex for mcref
+
+
+IUnknown
+-  
+
+
+//COSERVERINFO
+System32-> 64bit Dll's
+SysWOW64-> 32bit Dll's
+32 bit reg file formt -
+
+
+//create multi and div
