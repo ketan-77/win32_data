@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\01-Inner_Dll_Server"
+    "\\01-Inner_Dll_Server",
+    "\\03-Client_exe"
   ],
   "SelectedNode": "\\01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.h",
   "PreviewInSolutionExplorer": false

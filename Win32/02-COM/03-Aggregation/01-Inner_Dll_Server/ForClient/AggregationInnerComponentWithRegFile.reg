@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\CLSID\{031B2519-D6C5-4243-A1AF-EEA6F608A55F}]
+@="KSM_Aggregation_Inner_Server"
+[HKEY_CLASSES_ROOT\CLSID\{031B2519-D6C5-4243-A1AF-EEA6F608A55F}\InprocServer32]
+@="C:\\Windows\\System32\\AggregationInnerComponentWithRegFile.dll"
+
+
+
+

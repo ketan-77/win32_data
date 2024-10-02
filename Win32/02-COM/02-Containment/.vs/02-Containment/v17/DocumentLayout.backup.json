@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:03-Client_exe\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\RegisterServer.reg||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:03-Client_exe\\RegisterServer.reg||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\HeaderForContainmentClient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:03-Client_exe\\HeaderForContainmentClient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:03-Client_exe\\window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterServer.reg",
-              "DocumentMoniker": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\RegisterServer.reg",
-              "RelativeDocumentMoniker": "03-Client_exe\\RegisterServer.reg",
-              "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\RegisterServer.reg",
-              "RelativeToolTip": "03-Client_exe\\RegisterServer.reg",
+              "DocumentIndex": 2,
+              "Title": "ContainmentInnerComponentWithRegFile.h",
+              "DocumentMoniker": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.h",
+              "RelativeDocumentMoniker": "01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.h",
+              "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.h",
+              "RelativeToolTip": "01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002531|",
-              "WhenOpened": "2024-09-18T16:56:21.721Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-09-19T02:52:47.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ContainmentInnerComponentWithRegFile.cpp",
+              "DocumentMoniker": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.cpp",
+              "RelativeDocumentMoniker": "01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.cpp",
+              "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.cpp",
+              "RelativeToolTip": "01-Inner_Dll_Server\\ContainmentInnerComponentWithRegFile.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-19T02:52:33.695Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HeaderForContainmentClient.h",
               "DocumentMoniker": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\HeaderForContainmentClient.h",
               "RelativeDocumentMoniker": "03-Client_exe\\HeaderForContainmentClient.h",
               "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\HeaderForContainmentClient.h",
               "RelativeToolTip": "03-Client_exe\\HeaderForContainmentClient.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-18T16:20:43.658Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "window.cpp",
               "DocumentMoniker": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\window.cpp",
               "RelativeDocumentMoniker": "03-Client_exe\\window.cpp",
               "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\02-Containment\\03-Client_exe\\window.cpp",
               "RelativeToolTip": "03-Client_exe\\window.cpp",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAuwHsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAuwHsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-18T16:17:32.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T16:17:32.667Z"
             }
           ]
         }
