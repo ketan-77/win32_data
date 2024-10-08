@@ -1,8 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\02-Outer_Dll_Server"
+    "\\01-Inner_Dll_Server"
   ],
-  "SelectedNode": "\\02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.def",
   "PreviewInSolutionExplorer": false
 }

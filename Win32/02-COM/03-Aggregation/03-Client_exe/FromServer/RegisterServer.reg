@@ -7,9 +7,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\CLSID\{7FE5CED4-5D15-476C-9932-BFDB2DAE6E6B}]
 @="KSM_Containment_Inner_Server"
 [HKEY_CLASSES_ROOT\CLSID\{7FE5CED4-5D15-476C-9932-BFDB2DAE6E6B}\InprocServer32]
-@="C:\\Windows\\System32\\ContainmentInnerServer.dll"
-
-
-
+@="C:\\Windows\\System32\\ContainmentInnerComponentWithRegFile.dll"
 
 

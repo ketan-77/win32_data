@@ -98,7 +98,7 @@ HRESULT CMulDivision::QueryInterface_NoAggregation(REFIID riid, void **ppv)
 	if (riid == IID_IUnknown)
 		*ppv = static_cast<INoAggregationIUnknown*>(this);
 	else if (riid == IID_IMultiplication)
-		*ppv = static_cast<IMultiplication*>(this);
+		*ppv = static_cast<IMultiplication*>(this); // in this case we inheriting og IUnknown (function ptr)
 	else if (riid == IID_IDivision)
 		*ppv = static_cast<IDivision*>(this);
 	else

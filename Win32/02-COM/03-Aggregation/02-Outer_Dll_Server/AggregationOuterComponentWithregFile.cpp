@@ -78,8 +78,8 @@ CSumSubtract::~CSumSubtract(void)
 {
 	if (m_pIUnknownInner) {
 		m_pIUnknownInner->Release();
+		m_pIUnknownInner = NULL;
 	}
-	m_pIUnknownInner = NULL;
 	InterlockedDecrement(&glNumberOfActiveComponents); //decrement global count
 }
 
@@ -94,7 +94,7 @@ HRESULT CSumSubtract::QueryInterface(REFIID riid, void **ppv)
 	else if (riid == IID_IMultiplication)
 		return m_pIUnknownInner->QueryInterface(riid, ppv);
 	else if (riid == IID_IDivision)
-		return m_pIUnknownInner->QueryInterface(riid, ppv);
+		return m_pIUnknownInner->QueryInterface(riid, ppv); //method coloring
 	else
 	{
 		*ppv = NULL;
@@ -141,12 +141,13 @@ HRESULT __stdcall CSumSubtract::DivisionOfTwoIntegers(int num1, int num2, int* p
 
 HRESULT __stdcall CSumSubtract::InitializeInnerComponent(void) {
 	HRESULT hr;
-	//2nd param - made it aggregated class
+	//2nd param - made it aggregated class - this ptr will load innerServer - 5th param - inners IUnkown and 2nd is outers IUnknown
 	hr = CoCreateInstance(CLSID_MulDiv, reinterpret_cast<IUnknown*>(this), CLSCTX_INPROC_SERVER, IID_IUnknown, (void**)&m_pIUnknownInner);
 	if (FAILED(hr)) {
 		MessageBox(NULL, TEXT("IUnknown interface can not be obtained from inner component"), TEXT("Inner Server Error"), MB_ICONERROR);
 		return E_FAIL;
 	}
+	//outer think he will get IUnkwnon ptr but he get INoAggregationIUnknown
 	return S_OK;
 }
 
