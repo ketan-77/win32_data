@@ -84,6 +84,7 @@ CMulDivision::CMulDivision(IUnknown *pIUnknownOuter)
 	}
 	else
 	{
+		//you will come to this block when inner server directly called by client
 		m_pIUnknownOuter = reinterpret_cast<IUnknown*>(static_cast<INoAggregationIUnknown*>(this));
 	}
 }
