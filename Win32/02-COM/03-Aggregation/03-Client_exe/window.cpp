@@ -11,6 +11,8 @@ ISum* pISum = NULL;
 ISubtract* pISubtract = NULL;
 IMultiplication* pIMultiplication = NULL;
 IDivision* pIDivision = NULL;
+IUnknown* pIUnk1 = NULL;
+IUnknown* pIUnk2 = NULL;
 
 //Entry point function
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdLine, int iCmdShow) {
@@ -152,19 +154,71 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 			MessageBox(NULL, TEXT("IDivision Interface didn't obtained"), TEXT("COM ERROR"), MB_ICONERROR);
 			DestroyWindow(hwnd);
 		}
-		pIMultiplication->Release();
-		pIMultiplication = NULL;
+		
 		iNum1 = 155;
 		iNum2 = 51;
 		pIDivision->DivisionOfTwoIntegers(iNum1, iNum2, &iDiv);
 		wsprintf(str, TEXT("Division of %d And %d = %d"), iNum1, iNum2, iDiv);
 		MessageBox(hwnd, str, TEXT("RESULT"), MB_OK);
 
+
+		hr = pIDivision->QueryInterface(IID_ISum, (void**)&pISum);
+		if (FAILED(hr))
+		{
+			MessageBox(NULL, TEXT("ISum Interface didn't obtained"), TEXT("COM ERROR"), MB_ICONERROR);
+			DestroyWindow(hwnd);
+		}
 		pIDivision->Release();
 		pIDivision = NULL;
+		
+		iNum1 = 155;
+		iNum2 = 51;
+		pISum->SumOfTwoIntegers(iNum1, iNum2, &iSum);
+		wsprintf(str, TEXT("Again sum of %d And %d = %d"), iNum1, iNum2, iSum);
+		MessageBox(hwnd, str, TEXT("RESULT"), MB_OK);
 
+		/*pISum->Release();
+		pISum = NULL;
+		*/
 
+		//pISum-> IUnk
+		//pIMult -> IUnk
 
+		pISum->QueryInterface(IID_IUnknown, (void**)&pIUnk1);
+		if (FAILED(hr))
+		{
+			MessageBox(NULL, TEXT("IUnk1 Interface didn't obtained"), TEXT("COM ERROR"), MB_ICONERROR);
+			DestroyWindow(hwnd);
+		}
+		MessageBox(NULL, TEXT("IUnk1 Interface obtained test"), TEXT("COM ERROR"), MB_OK);
+		pISum->Release();
+		pISum = NULL;
+
+		pIMultiplication->QueryInterface(IID_IUnknown, (void**)&pIUnk2);
+		if (FAILED(hr))
+		{
+			MessageBox(NULL, TEXT("IUnk2 Interface didn't obtained"), TEXT("COM ERROR"), MB_ICONERROR);
+			DestroyWindow(hwnd);
+		}
+		pIMultiplication->Release();
+		pIMultiplication = NULL;
+
+		if (pIUnk1 == pIUnk2)
+			MessageBox(NULL, TEXT("IUnk1 and IUnk2 Matched"), TEXT("SUCCESS"), MB_OK);
+		else
+			MessageBox(NULL, TEXT("IUnk1 and IUnk2 didn't Matched"), TEXT("FAILED"), MB_ICONERROR);
+
+		pISum->Release();
+		pISum = NULL;
+
+		pIMultiplication->Release();
+		pIMultiplication = NULL;
+		
+		pIUnk2->Release();
+		pIUnk2 = NULL;
+		
+		pIUnk1->Release();
+		pIUnk1 = NULL;
 		DestroyWindow(hwnd); //send WM_DESTROY
 		break;
 	case WM_DESTROY:
@@ -182,6 +236,16 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 void SafeInterfaceRelease(void)
 {
 	//code
+	if (pIUnk1)
+	{
+		pIUnk1->Release();
+		pIUnk1 = NULL;
+	}
+	if (pIUnk2)
+	{
+		pIUnk2->Release();
+		pIUnk2 = NULL;
+	}
 	if (pIDivision)
 	{
 		pIDivision->Release();
