@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.cpp",
               "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.cpp",
               "RelativeToolTip": "02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.cpp",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAUwF8AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAUwFgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-09T03:43:58.103Z",
               "EditorCaption": ""
@@ -45,7 +45,7 @@
               "RelativeDocumentMoniker": "01-Inner_Dll_Server\\AggregationInnerComponentWithRegFile.cpp",
               "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\01-Inner_Dll_Server\\AggregationInnerComponentWithRegFile.cpp",
               "RelativeToolTip": "01-Inner_Dll_Server\\AggregationInnerComponentWithRegFile.cpp",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAhwIIAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAhwIQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-03T16:57:26.783Z",
               "EditorCaption": ""
@@ -58,9 +58,10 @@
               "RelativeDocumentMoniker": "03-Client_exe\\window.cpp",
               "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\03-Client_exe\\window.cpp",
               "RelativeToolTip": "03-Client_exe\\window.cpp",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAAAHQAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAgwHQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-03T16:57:13.255Z"
+              "WhenOpened": "2024-10-03T16:57:13.255Z",
+              "EditorCaption": ""
             }
           ]
         }
