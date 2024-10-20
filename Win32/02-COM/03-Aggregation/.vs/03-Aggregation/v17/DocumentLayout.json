@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\01-Inner_Dll_Server\\AggregationInnerComponentWithRegFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:01-Inner_Dll_Server\\AggregationInnerComponentWithRegFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -27,38 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AggregationOuterComponentWithregFile.cpp",
-              "DocumentMoniker": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.cpp",
-              "RelativeDocumentMoniker": "02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.cpp",
-              "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.cpp",
-              "RelativeToolTip": "02-Outer_Dll_Server\\AggregationOuterComponentWithregFile.cpp",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAUwFgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-10-09T03:43:58.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "AggregationInnerComponentWithRegFile.cpp",
               "DocumentMoniker": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\01-Inner_Dll_Server\\AggregationInnerComponentWithRegFile.cpp",
               "RelativeDocumentMoniker": "01-Inner_Dll_Server\\AggregationInnerComponentWithRegFile.cpp",
               "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\01-Inner_Dll_Server\\AggregationInnerComponentWithRegFile.cpp",
               "RelativeToolTip": "01-Inner_Dll_Server\\AggregationInnerComponentWithRegFile.cpp",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAhwIQAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAqwEMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-03T16:57:26.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "window.cpp",
               "DocumentMoniker": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\03-Client_exe\\window.cpp",
               "RelativeDocumentMoniker": "03-Client_exe\\window.cpp",
               "ToolTip": "D:\\ok\\win32_data\\Win32\\02-COM\\03-Aggregation\\03-Client_exe\\window.cpp",
               "RelativeToolTip": "03-Client_exe\\window.cpp",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAgwHQAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAgwGQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-03T16:57:13.255Z",
               "EditorCaption": ""
