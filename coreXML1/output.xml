@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tfcmConfigurations>
+	<testNode>
+		<child1>1</child1>
+		<child2>1</child2>
+		<child3>0</child3>
+	</testNode>
+	<testNode1>
+		<child1>1</child1>
+		<child2>1</child2>
+		<child3>0</child3>
+	</testNode1>
+	<testNode2>
+	<testNode2_>
+	<testNode2__>
+		<child1>1</child1>
+		<child2>1</child2>
+		<child3>0</child3>
+	</testNode2__>
+	</testNode2_>
+	</testNode2>
+	<testNodeMain>
+		<testNodeMain1>
+		</testNodeMain1>
+		
+		<testNodeMain2>
+		</testNodeMain2>
+		
+		<testNodeMain3>
+		</testNodeMain3>
+	</testNodeMain>
+</tfcmConfigurations>
