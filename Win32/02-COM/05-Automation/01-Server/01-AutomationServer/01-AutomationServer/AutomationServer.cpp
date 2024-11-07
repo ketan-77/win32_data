@@ -10,7 +10,7 @@ class CMyMath : public IMyMath
 {
 private:
 	long m_cRef;
-	ITypeInfo* m_pITypeInfo;
+	ITypeInfo* m_pITypeInfo = NULL;
 public:
 	//constructor
 	CMyMath(void);
@@ -127,6 +127,8 @@ ULONG CMyMath::Release(void) {
 	InterlockedDecrement(&m_cRef);
 
 	if (m_cRef == 0) {
+		m_pITypeInfo->Release();
+		m_pITypeInfo = NULL;
 		delete(this);
 		return (0);
 	}
@@ -141,6 +143,43 @@ HRESULT CMyMath::SumOfTwoIntegers(int num1, int num2, int *pSum) {
 }
 HRESULT CMyMath::SubtractionOfTwoIntegers(int num1, int num2, int *pSum) {
 	*pSum = num1 - num2;
+	return (S_OK);
+}
+
+HRESULT CMyMath::InitInstance(void)
+{
+	void ComErrorDescriptionString(HWND, HRESULT);
+
+	//
+	HRESULT hr;
+	ITypeLib* pITypeLib = NULL;
+
+	if (m_pITypeInfo == NULL)
+	{
+		hr = LoadRegTypeLib( //this is com helper function
+			LIBID_AutomtionServer, // 
+			1, 0, //major and minor (versioning)
+			0x00, //which language and country (locale) - default - en-US
+			&pITypeLib //to load type library
+		);
+
+		if (FAILED(hr))
+		{
+			ComErrorDescriptionString(NULL, hr);
+			return (hr);
+		}
+	
+		hr = pITypeLib->GetTypeInfoOfGuid(IID_IMyMath, &m_pITypeInfo);
+		if (FAILED(hr))
+		{
+			ComErrorDescriptionString(NULL, hr);
+			pITypeLib->Release();
+			return (hr);
+		}
+
+		pITypeLib->Release();
+	}
+
 	return (S_OK);
 }
 
@@ -200,6 +239,9 @@ HRESULT CMyMathClassFactory::CreateInstance(IUnknown* pUnkOuter, REFIID riid, vo
 		return (E_OUTOFMEMORY);
 	}
 
+	//call automation related init method
+	pCMyMath->InitInstance();
+
 	hr = pCMyMath->QueryInterface(riid, ppv);
 	pCMyMath->Release();
 	return (hr);
@@ -215,20 +257,69 @@ HRESULT CMyMathClassFactory::LockServer(BOOL fLock)
 	return (S_OK);
 }
 
-extern "C" HRESULT __stdcall DllGetClassObject(REFCLSID rclsid, REFIID riid, void** ppv)
+//Implementation of IDispatch methods
+HRESULT CMyMath::GetTypeInfoCount(UINT* pCountTypeInfo)
 {
-	CSumSubtractClassFactory *pCSumSubtractClassFactory = NULL;
+	*pCountTypeInfo = 1;
+
+	return (S_OK);
+}
+
+HRESULT CMyMath::GetTypeInfo(UINT iTypeInfo, LCID lcid, ITypeInfo** ppITypeInfo)
+{
+	*ppITypeInfo = NULL;
+	//i - index
+	if (iTypeInfo != 0)
+	{
+		return (DISP_E_BADINDEX);
+	}
+
+	m_pITypeInfo->AddRef();
+	*ppITypeInfo = m_pITypeInfo;
+
+	return (S_OK);
+}
+
+HRESULT CMyMath::GetIDsOfNames(REFIID riid, LPOLESTR* rgszNames, UINT cNames, LCID lcid, DISPID* rgDispId)
+{
+	return (DispGetIDsOfNames(m_pITypeInfo, rgszNames, cNames, rgDispId));
+}
+
+HRESULT CMyMath::Invoke(DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS* pDispParams, VARIANT* pVarResult, EXCEPINFO* pExcepInfo, UINT* puArgErr)
+{
+	//var declaration
 	HRESULT hr;
 
-	if (rclsid != CLSID_SumSubtract)
+	hr = DispInvoke(
+		this,
+		m_pITypeInfo,
+		dispIdMember,
+		wFlags,
+		pDispParams,
+		pVarResult,
+		pExcepInfo,
+		puArgErr
+	);
+
+	return (hr);
+}
+
+
+
+extern "C" HRESULT __stdcall DllGetClassObject(REFCLSID rclsid, REFIID riid, void** ppv)
+{
+	CMyMathClassFactory *pCMyMathClassFactory = NULL;
+	HRESULT hr;
+
+	if (rclsid != CLSID_MyMath)
 		return (CLASS_E_CLASSNOTAVAILABLE);
 
-	pCSumSubtractClassFactory = new CSumSubtractClassFactory;
-	if (pCSumSubtractClassFactory == NULL)
+	pCMyMathClassFactory = new CMyMathClassFactory;
+	if (pCMyMathClassFactory == NULL)
 		return (E_OUTOFMEMORY);
 
-	hr = pCSumSubtractClassFactory->QueryInterface(riid, ppv);
-	pCSumSubtractClassFactory->Release();
+	hr = pCMyMathClassFactory->QueryInterface(riid, ppv);
+	pCMyMathClassFactory->Release();
 
 	return (hr);
 }
@@ -240,3 +331,24 @@ extern "C" HRESULT __stdcall DLLCanUnloadNow(void) {
 		return (S_FALSE);
 }
 	
+void ComErrorDescriptionString(HWND hwnd, HRESULT hr)
+{
+	// variable declarations
+	TCHAR* szErrorMessage = NULL;
+	TCHAR str[255];
+	if (FACILITY_WINDOWS == HRESULT_FACILITY(hr))
+		hr = HRESULT_CODE(hr);
+	//FormatMessage() win32 function - used for debugging
+	if (FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM,
+		NULL, hr, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPTSTR)&szErrorMessage, 0, //MAKELANGID() - usemto give locale (en-US)
+		NULL) != 0
+	)
+	{
+		swprintf_s(str, TEXT("%#x : %s"), hr, szErrorMessage);
+		LocalFree(szErrorMessage);
+	}
+	else
+		swprintf_s(str, TEXT("[Could not find a description for error # %#x.]\n"),
+			hr);
+	MessageBox(hwnd, str, TEXT("COM Error"), MB_OK);
+}

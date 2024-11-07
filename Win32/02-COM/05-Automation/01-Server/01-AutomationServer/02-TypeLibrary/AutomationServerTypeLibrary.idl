@@ -1,0 +1,37 @@
+import "unknwn.idl" ;
+//IMyMath Interface
+[
+	//below are properties of interface
+	object,  //This tell that it is part of COM's coclass that is implementing this class
+		uuid(A48C5C17-A81A-4353-AB58-EA34B94734E9), //IID IMyMath
+		helpstring("IMyMath Interface"), //
+		pointer_default(unique), //this interface will be unique ptr
+		dual, //two interface support in single class
+		oleautomation //My interface is automation interface
+]
+interface IMyMath : IDispatch
+{
+	import "oaidl.idl"; //oa - ole automation
+	
+	HRESULT SumOfTwoIntegers([in] int, [in] int, [out, retval] int*);
+	HRESULT SubtractionOfTwoIntegers([in] int, [in] int, [out, retval] int*);
+};
+//Actual typelib related code
+[
+	uuid(7039A875-84C0-4AD5-917A-8A332600052E), //LIBID of Type Library 
+		version(1.0),
+		helpstring("MyMath components type library")
+]
+
+library	AutomationServerTypeLibrary {
+	importlib("stdole32.tlb");
+		//component code
+		[
+			uuid(16D4B18C-885C-4664-B673-714A59988C88), //CLSID of MyMath Component 
+			helpstring("Math automation component class")
+		]
+		coclass CMyMath 
+		{
+			[default] interface IMyMath;
+		};
+};

@@ -1,0 +1,36 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{Actual CLSID}]
+@="KSMAutomationServer"
+
+[HKEY_CLASSES_ROOT\CLSID\{Actual CLSID}\InprocServer32]
+@="C:\\Windows\\System32\\<AutomationServer dll file>.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{Actual CLSID}\TypeLib]
+@="{Actual LIBID}"
+
+[HKEY_CLASSES_ROOT\TypeLib\{Actual LIBID}]
+@="KSMAutomationTypeLibrary"
+
+[HKEY_CLASSES_ROOT\TypeLib\{Actual LIBID}\1.0]
+@="KSMAutomationTypeLibrary v1.0"
+
+[HKEY_CLASSES_ROOT\TypeLib\{Actual LIBID}\1.0\0\win32]
+@="C:\\Windows\\System32\\<AutomationServer TypeLib>.tlb"
+
+[HKEY_CLASSES_ROOT\Interface\{Actual IID}]
+@="<Interface name>"
+
+[HKEY_CLASSES_ROOT\Interface\{Actual IID}\TypeLib]
+@="{Actual LIBID}"
+
+//next two key are about marshalling
+[HKEY_CLASSES_ROOT\Interface\{Actual IID}\ProxyStubClsid32]
+@="{00020424-0000-0000-C000-000000000046}" //marsheler interface GUID
+
+[HKEY_CLASSES_ROOT\Interface\{Actual IID}\ProxyStubClsid]
+@="{00020424-0000-0000-C000-000000000046}" 
+
+
+
+
