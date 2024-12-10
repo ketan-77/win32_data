@@ -1,0 +1,11 @@
+HW
+1 : After application start show plain blackwindow and string centrally (click on file menu and select open, to open an image file)
+ window should occupi desktop 1/4 area
+2 : 5th chapter menu bar (common dialog - page 208)
+	file, edit and help menu (help -- > single option about)
+	open file click - dialog box on file tab
+	dynamic data exchange 12 page ahead - common dialog box, next to tooltip program
+	on selected image when we call open that image should load on screen
+3 : Uninitialize old image before loading new image
+4 : Clamp the value, it should clamp to 1/4th of windows now resize should be done 
+5 : Open the dialog box we created add that on edit button

@@ -1,0 +1,17 @@
+Program started.
+User log file created and opened successfully.
+All log files are created and open successfully.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+user picked a color.
+program terminated successfully.

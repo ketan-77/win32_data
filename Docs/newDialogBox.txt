@@ -1,0 +1,38 @@
+Edit dialog box should not cover image (any candy color) 
+Text black
+
+
+
+
+About
+IMAGE EDITOR & COLOR PICKER 
+rc file (GROUPBOX)
+each groupbox required radio button (2) 
+
+about dia
+editor dialog
+register user dialog (Spot validation)
+ - 3 edit text boxes
+	user name : First Name, Middle Name, Surname (tag name will be black turn red if user give wrong input)
+	Enable register after it get all three values (EnableWindow api)
+
+In Editor dialog
+on Exit button application should close
+on ok dialog box should exit, but keep app running (all content on editor block remain disable until user register)
+at start only exit and register button should be enable
+
+(KillFocus) to kill focus on old edit box
+
+
+//
+for group box
+iamge editor selected color picker disable (vice-versa)
+.cur for cursor file
+
+//in color picker
+- Their will be 3 text boxes for RGB read only
+114 refer note
+122 Enable and disable
+127 Kill focus
+132 icon on db
+138 for checkbox

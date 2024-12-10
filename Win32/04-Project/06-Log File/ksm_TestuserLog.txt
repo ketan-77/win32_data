@@ -1,0 +1,2 @@
+User log file created and opened successfully.
+program terminated successfully.

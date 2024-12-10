@@ -1,0 +1,6 @@
+tlbimp.exe - type library import
+
+ildsm.exe /adv dllName
+tlbimp generate CMymathClass that u=is understandable by .net code
+
+csc.exe //C# compiler

@@ -1,0 +1,48 @@
+#include "window.h"
+#include <Windows.h>
+
+// Define your icon resource
+KSM_ICON ICON "Icon1.ico"
+
+// File--> Open
+OPENFILE DIALOG 0, 700, 300, 150
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "OPENFILE" 
+BEGIN
+    PUSHBUTTON "OK", IDOK, 140, 115, 50, 20
+    PUSHBUTTON "CANCEL", IDCANCEL, 200, 115, 50, 20
+END
+
+// Edit --> Edit 
+EDIT DIALOG 0, 1, 300, 150
+STYLE DS_MODALFRAME | DS_CENTER | WS_CAPTION | WS_SYSMENU
+CAPTION "EDIT"
+BEGIN
+    PUSHBUTTON "OK", IDOK, 120, 115, 50, 20
+    PUSHBUTTON "EXIT", IDEXIT, 180, 115, 50, 20
+    PUSHBUTTON "ABOUT", IDABOUT, 240, 115, 50, 20
+END
+
+
+//Menu bar
+MYMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open", IDM_OPEN
+        MENUITEM "&Exit", IDM_EXIT
+    END
+
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Edit", IDM_EDIT
+    END
+
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About", IDM_ABOUT
+    END
+END
+
+
+

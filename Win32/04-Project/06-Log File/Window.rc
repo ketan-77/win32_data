@@ -1,0 +1,3 @@
+#include"window.h"
+
+KSM_ICON ICON "Icon1.ico"
